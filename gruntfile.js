@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         style: 'expanded'
       },
       files: {                         // Dictionary of files
-        'themes/bartik/css/style.css': 'themes/bartik/sass/style.scss',       // 'destination': 'source'
+        'all/themes/prdxn/css/header.css': 'all/themes/prdxn/css/header.scss',       // 'destination': 'source'
         
       }
     }
