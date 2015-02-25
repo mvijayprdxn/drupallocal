@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     watch: {
       src: {
         files: ['**/*.scss','**/*.css', '**/*.php'],
-          tasks: ['sass', 'jshint']
+          tasks: ['sass', 'jshint', 'concat', 'uglify']
       },
       options: {
         livereload: true,
@@ -33,13 +33,35 @@ module.exports = function (grunt) {
         jQuery: true
       }
     }
+  },
+
+
+  concat: {
+    options: {
+      separator: ';',
+    },
+    dist: {
+      src: 'all/themes/prdxn/js/*.js',
+      dest: 'all/themes/prdxn/prod/js/script.js',
+    },
+  },
+
+  uglify: {
+    my_target: {
+      files: {
+        'all/themes/prdxn/prod/js/script.min.js': 'all/themes/prdxn/prod/js/script.js'
+      }
+    }
   }
+
 });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');  
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('default', ['jshint', 'watch', 'sass']);
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', ['jshint', 'watch', 'sass', 'concat', 'uglify']);
  
 };
