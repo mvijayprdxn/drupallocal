@@ -3,5 +3,5 @@
 "mappings": "AACA,oBAAqB;EACpB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,qDAAqD",
 "sources": ["../sass/header.scss"],
 "names": [],
-"file": "header.css"
+"file": "style.css"
 }

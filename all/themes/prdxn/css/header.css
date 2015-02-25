@@ -1,8 +1,7 @@
-section h1 {
-  font-size: 50px;
-}
-section h2 {
-  background: #000;
+.animated-background {
+  width: 100%;
+  height: 100%;
+  background: url("../images/gif-animated-wallpaper.gif") no-repeat;
 }
 
 /*# sourceMappingURL=header.css.map */

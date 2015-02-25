@@ -16,7 +16,7 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files
-          'all/themes/prdxn/css/header.css': 'all/themes/prdxn/sass/header.scss'       // 'destination': 'source'
+          'all/themes/prdxn/css/style.css': 'all/themes/prdxn/sass/header.scss'       // 'destination': 'source'
         }
       }
     },
@@ -28,11 +28,11 @@ module.exports = function (grunt) {
       eqnull: true,
       browser: true,
       camelcase: true,
-      funcscope: true
+      funcscope: true,
       globals: {
         jQuery: true
-      },
-    },
+      }
+    }
   }
 });
 
