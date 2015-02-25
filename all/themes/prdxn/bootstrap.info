@@ -98,6 +98,8 @@ settings[toggle_search] = 1
 ; JavaScript
 ; --------------
 ; exclude[js][] = 'modules/contextual/contextual.js'
+ scripts[] = prod/js/script.js
+ ;scripts[] = js/logo_animation.js
 
 ; CSS
 ; --------------

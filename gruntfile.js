@@ -38,10 +38,10 @@ module.exports = function (grunt) {
 
   concat: {
     options: {
-      separator: ';',
+      separator: ' ',
     },
     dist: {
-      src: 'all/themes/prdxn/js/*.js',
+      src: 'all/themes/prdxn/js/customjs/*.js',
       dest: 'all/themes/prdxn/prod/js/script.js',
     },
   },
