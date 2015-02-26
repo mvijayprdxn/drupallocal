@@ -21,7 +21,7 @@
           </button>
         </div>
         <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-          <div class="navbar-collapse collapse navbar-left">
+          <div class="navbar-collapse collapse navbar-left links">
             <nav role="navigation">
               <?php if (!empty($primary_nav)): ?>
                 <?php print render($primary_nav); ?>
