@@ -103,7 +103,7 @@ settings[toggle_search] = 1
 
 ; CSS
 ; --------------
-stylesheets[all][] = css/style.css
+stylesheets[all][] = prod/css/styles.min.css
 exclude[css][] = 'misc/vertical-tabs.css'
 exclude[css][] = 'modules/aggregator/aggregator.css'
 ; Necessary administrative block CSS.

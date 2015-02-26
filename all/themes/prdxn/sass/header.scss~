@@ -1,5 +1,6 @@
 
 
+//Logo and animation
 .navbar-header{
   .logo{
     margin-left: 30px;
@@ -17,31 +18,52 @@
 .condensed .navbar-header .logo-org { margin-top: 0}
 .condensed .navbar-header .logo-swap { margin-top: -260px; }
 
-.region-navbar-right{
-  width: 430px;
-  #block-search-form { float: left;}
-  #block-menu-menu-socail-share{
+//Social links
+.region-navbar-right { 
+  width: 280px; 
+  #block-menu-menu-socail-share {
     .block-title {display: none;}
-    .menu li {display: inline-block;}
+    .menu li { display: inline-block;}
+  }
+}
+
+//Menu and seacrh
+.links {
+  width: 60%;
+  position: relative;
+  #block-search-form { 
+    #search-block-form {
+      position: absolute;
+      right: 0;
+    }
+    .input-group {
+      text-align: right;
+      input {
+        padding: 0;
+        width: 0;
+        transition: all 0.8s ease-out 0s;
+      }
+    }
   }
 }
 
 .animated-background {
-	width: 100%;	
-  	margin-top: 51px;
-	position: relative;
-	background: url('../images/gif-animated-wallpaper.gif') no-repeat;
+	
 	h2 {
 		margin: 0 0 0 -50px;
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 60%;
+		left: 40%;
+		font-size: 100px;
+		color: #fff;
 	}
 	h3 {
 		margin: 0 0 0 -50px;
 		position: absolute;
-		top: 52%;
-		left: 50%;
+		top: 72%;
+		left: 14%;
+		font-size: 70px;
+		color: #fff;
 	}
 
 }

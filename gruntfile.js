@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 
   concat_css: {
     options: {
-      // Task-specific options go here. 
+      // Task-specific options go here.
     },
     all: {
       src: ["all/themes/prdxn/css/*.css"],
@@ -83,12 +83,12 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');  
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['jshint', 'watch', 'sass', 'concat', 'uglify', 'cssmin', 'concat_css']);
- 
+
 };
