@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     watch: {
       src: {
         files: ['**/*.scss','**/*.css', '**/*.php'],
-          tasks: ['sass', 'jshint', 'concat', 'uglify']
+          tasks: ['sass', 'jshint', 'concat', 'uglify', 'cssmin', 'concat_css']
       },
       options: {
         livereload: true,
@@ -16,7 +16,8 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files
-          'all/themes/prdxn/css/style.css': 'all/themes/prdxn/sass/*.scss'       // 'destination': 'source'
+          'all/themes/prdxn/css/header.css': 'all/themes/prdxn/sass/header.scss',
+	       'all/themes/prdxn/css/homepage.css': 'all/themes/prdxn/sass/homepage.scss'       // 'destination': 'source'
         }
       }
     },
@@ -52,7 +53,31 @@ module.exports = function (grunt) {
         'all/themes/prdxn/prod/js/script.min.js': 'all/themes/prdxn/prod/js/script.js'
       }
     }
+  },
+
+  concat_css: {
+    options: {
+      // Task-specific options go here. 
+    },
+    all: {
+      src: ["all/themes/prdxn/css/*.css"],
+      dest: "all/themes/prdxn/prod/css/styles.css"
+    },
+  },
+
+  cssmin: {
+  options: {
+    shorthandCompacting: false,
+    roundingPrecision: -1
+  },
+  target: {
+    files: {
+      'all/themes/prdxn/prod/css/styles.min.css': 'all/themes/prdxn/prod/css/styles.css'
+    }
   }
+}
+
+
 
 });
 
@@ -62,6 +87,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['jshint', 'watch', 'sass', 'concat', 'uglify']);
+  grunt.loadNpmTasks('grunt-concat-css');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.registerTask('default', ['jshint', 'watch', 'sass', 'concat', 'uglify', 'cssmin', 'concat_css']);
  
 };
