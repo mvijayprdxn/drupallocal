@@ -57,7 +57,7 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
 
 function prdxn_preprocess_html(&$variables) {
   drupal_add_css(
-    'css/style.css',
+    'prod/css/style.css',
 array('type' => 'internal')
   );
 }

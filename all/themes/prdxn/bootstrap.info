@@ -98,10 +98,12 @@ settings[toggle_search] = 1
 ; JavaScript
 ; --------------
 ; exclude[js][] = 'modules/contextual/contextual.js'
+ scripts[] = prod/js/script.js
+ ;scripts[] = js/logo_animation.js
 
 ; CSS
 ; --------------
-stylesheets[all][] = css/style.css
+stylesheets[all][] = prod/css/styles.min.css
 exclude[css][] = 'misc/vertical-tabs.css'
 exclude[css][] = 'modules/aggregator/aggregator.css'
 ; Necessary administrative block CSS.
