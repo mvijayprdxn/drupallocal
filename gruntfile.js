@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       src: {
-        files: ['**/*.scss','**/*.css', '**/*.php'],
+        files: ['**/*.scss','**/*.css', '**/*.php','all/themes/prdxn/js/customjs/*.js',],
           tasks: ['sass', 'jshint', 'concat', 'uglify', 'cssmin', 'concat_css']
       },
       options: {

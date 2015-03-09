@@ -98,12 +98,16 @@ settings[toggle_search] = 1
 ; JavaScript
 ; --------------
 ; exclude[js][] = 'modules/contextual/contextual.js'
- scripts[] = prod/js/script.js
+  scripts[] = prod/js/script.js
+  scripts[] = js/jquery.flexslider-min.js
+  scripts[] = js/jquery-ui.min.js
  ;scripts[] = js/logo_animation.js
 
 ; CSS
 ; --------------
 stylesheets[all][] = prod/css/styles.min.css
+stylesheets[all][] = css/flexslider.css
+stylesheets[all][] = css/jquery-ui.min.css
 exclude[css][] = 'misc/vertical-tabs.css'
 exclude[css][] = 'modules/aggregator/aggregator.css'
 ; Necessary administrative block CSS.

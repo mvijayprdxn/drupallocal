@@ -65,4 +65,19 @@
   color: #fff;
 }
 
-/*# sourceMappingURL=header.css.map */
+.customSliders {
+  margin-top: 60px;
+}
+.customSliders li a {
+  color: #000;
+  opacity: 1;
+}
+
+.views-row {
+  border: 1px solid;
+  float: left;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
