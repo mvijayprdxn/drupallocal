@@ -30,7 +30,11 @@
 //Menu and seacrh
 .links {
   width: 60%;
-  position: relative; 
+  position: relative;
+  ul.navbar-nav{
+    float: right;
+    margin-right: 30px;
+  }
   #block-search-form { 
     #search-block-form {
       position: absolute;
@@ -38,6 +42,7 @@
     }
     .input-group {
       text-align: right;
+      margin-top:8px;
       input {
         padding: 0;
         width: 0;
@@ -48,7 +53,7 @@
 }
 
 .animated-background {
-	
+	width: 100%;
 	h2 {
 		margin: 0 0 0 -50px;
 		position: absolute;
@@ -65,16 +70,18 @@
 		font-size: 70px;
 		color: #fff;
 	}
-
+  .field-content > img{
+    width: 100%; 
+  }
 }
 
 
-.customSliders{
+.customSliders{ 
  margin-top: 60px; 
-  li a{
+ overflow:hidden;
+  li a{ 
   color: #000;
   opacity: 1;
-}
 }
 .views-row{
    border: 1px solid;
@@ -83,4 +90,5 @@
     overflow: hidden;
     position: relative;
     width: 450px
+}
 }

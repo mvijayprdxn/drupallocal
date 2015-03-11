@@ -11,52 +11,47 @@
         
         //Get index of page when refresh to start slider from that index.
         $_selector.each(function (){
-          if( pathname[2] === $(this).text()){
+          if( pathname[1] === $(this).text()){
             indexs = $(this).parent().index();
           }
         });
         
-       // $('ul.slides li div.views-row').css('display', 'none');
         //Adding flexslider to conatiner
         $('.customSliders').flexslider({
-          animation: "slide",
+          animation: "fade",
           slideshow: false,
           animationLoop: true,
-          slideshowSpeed: 10000,
           startAt: indexs,
+          animationSpeed: 0,
           
-          //Slider contain animation
-          start : function(slider){
-          //$('ul.slides li div.views-row').fadeIn(500);
-//              $('ul.slides li div.views-row').each(function(i){     // Select the next slide :eq(' + slider.animatingTo + ')
-//                var div = $(this);
-//                setTimeout(function(){
-//                  div.animate({left: "-10px"}, {duration: 2000, easing: 'easeInExpo', queue: false});
-//                  //.delay(2500).animate({opacity: 0}, {duration: 500});
-//                },i*100); 
-//            }); 
-//          
-           
-          },
+          //Animation to current slide and dealys to current slide
           before : function(slider){
-           // $('ul.slides li div.views-row').css('display', 'none');
+           $('ul.slides li:eq('+slider.currentSlide+') div.views-row').each(function(i){     // Select the next slide :eq(' + slider.animatingTo + ')
+                var div = $(this);
+                setTimeout(function(){
+                  div.animate({left: "-150%"}, {duration: 1000, easing: 'easeInExpo', queue: false});
+                },i*300); 
+            });
+           
+           $('ul.slides li:eq('+slider.animatingTo+') div.views-row').css('left','150%');
+           slider.slides.eq(slider.currentSlide).delay(1500);
+           slider.slides.eq(slider.animatingTo).delay(1000);
           },
+          
           //main navigation active state
           after: function (slider){
-          //  $('ul.slides li div.views-row').fadeIn(500);
-//            $('ul.slides li div.views-row').each(function(i){     // Select the next slide :eq(' + slider.animatingTo + ')
-//                var div = $(this);
-//                setTimeout(function(){
-//                  div.animate({left: "0px"}, {duration: 2000, easing: 'easeInExpo', queue: false});
-//                  //.delay(2500).animate({opacity: 0}, {duration: 500});
-//                },i*100); 
-//            }); 
+            $('ul.slides li div.views-row').each(function(i){     // Select the next slide :eq(' + slider.animatingTo + ')
+                var div = $(this);
+                  setTimeout(function(){
+                  div.animate({left: "0px"}, {duration: 500, easing: 'easeInExpo', queue: false});
+                },i*200); 
+            }); 
             var current_slide =  slider.currentSlide,
                 href          =  $('.navbar-inverse .navbar-nav  li:eq('+ current_slide+') a').attr("href").split('/');
          
             //Change windows main url without reloading.
             if(history.pushState) {
-              history.pushState({"id":100}, href[2], href[2]);
+              history.pushState({"id":100}, href[1], href[1]);
             }
             $_selector.removeClass('active-trail active');
             $_selector.parent().removeClass('active-trail active');
@@ -74,7 +69,7 @@
         
         //Navigation click to changes slides as per click
         $_selector.click( function(e){
-          if($('body').hasClass('not-front') && !$('body').hasClass('page-node')){
+          if($('body').hasClass('not-front') && !$('body').hasClass('page-node') && !$('body').hasClass('page-admin')){
             e.preventDefault();
             var el   = $('.customSliders .flex-control-nav li a'),
                 num  = parseInt($(this).attr('data-no'), 10);

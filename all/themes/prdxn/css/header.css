@@ -35,12 +35,17 @@
   width: 60%;
   position: relative;
 }
+.links ul.navbar-nav {
+  float: right;
+  margin-right: 30px;
+}
 .links #block-search-form #search-block-form {
   position: absolute;
   right: 0;
 }
 .links #block-search-form .input-group {
   text-align: right;
+  margin-top: 8px;
 }
 .links #block-search-form .input-group input {
   padding: 0;
@@ -48,6 +53,9 @@
   transition: all 0.8s ease-out 0s;
 }
 
+.animated-background {
+  width: 100%;
+}
 .animated-background h2 {
   margin: 0 0 0 -50px;
   position: absolute;
@@ -64,16 +72,19 @@
   font-size: 70px;
   color: #fff;
 }
+.animated-background .field-content > img {
+  width: 100%;
+}
 
 .customSliders {
   margin-top: 60px;
+  overflow: hidden;
 }
 .customSliders li a {
   color: #000;
   opacity: 1;
 }
-
-.views-row {
+.customSliders .views-row {
   border: 1px solid;
   float: left;
   min-height: 300px;
@@ -81,5 +92,3 @@
   position: relative;
   width: 450px;
 }
-
-/*# sourceMappingURL=header.css.map */
