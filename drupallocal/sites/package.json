@@ -1,0 +1,31 @@
+{
+  "name": "sites",
+  "version": "1.0.0",
+  "description": "This directory structure contains the settings and configuration files specific to your site or sites and is an integral part of multisite configuration.",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prdxn/PRDXN-Drupal-rebuild"
+  },
+  "author": "PRDXN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prdxn/PRDXN-Drupal-rebuild/issues"
+  },
+  "homepage": "https://github.com/prdxn/PRDXN-Drupal-rebuild",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.0.0",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

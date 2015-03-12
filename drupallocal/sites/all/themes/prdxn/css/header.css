@@ -1,0 +1,68 @@
+.navbar-header .logo {
+  margin-left: 30px;
+  transition: all 0.8s ease-out 0s;
+  width: 150px;
+}
+.navbar-header .logo-swap {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  float: left;
+}
+.navbar-header .logo-org {
+  margin-top: -260px;
+}
+
+.condensed .navbar-header .logo-org {
+  margin-top: 0;
+}
+
+.condensed .navbar-header .logo-swap {
+  margin-top: -260px;
+}
+
+.region-navbar-right {
+  width: 280px;
+}
+.region-navbar-right #block-menu-menu-socail-share .block-title {
+  display: none;
+}
+.region-navbar-right #block-menu-menu-socail-share .menu li {
+  display: inline-block;
+}
+
+.links {
+  width: 60%;
+  position: relative;
+}
+.links #block-search-form #search-block-form {
+  position: absolute;
+  right: 0;
+}
+.links #block-search-form .input-group {
+  text-align: right;
+}
+.links #block-search-form .input-group input {
+  padding: 0;
+  width: 0;
+  transition: all 0.8s ease-out 0s;
+}
+
+.animated-background h2 {
+  margin: 0 0 0 -50px;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-size: 100px;
+  color: #fff;
+}
+.animated-background h3 {
+  margin: 0 0 0 -50px;
+  position: absolute;
+  top: 72%;
+  left: 14%;
+  font-size: 70px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=header.css.map */
