@@ -1,16 +1,17 @@
-body.admin-menu.toolbar {
+body.front {
   margin: 0 !important;
 }
-body.admin-menu.toolbar .row {
+body.front .row {
   padding: 0;
   margin: 0;
 }
-body.admin-menu.toolbar .row .col-lg-12 {
+body.front .row .col-lg-12 {
   padding: 0;
 }
-body.admin-menu.toolbar .row .col-lg-12 .views-field-field-background-image .field-content img {
+body.front .row .col-lg-12 .views-field-field-background-image .field-content img {
   width: 100%;
   height: 100%;
+  vertical-align: top;
 }
 
 /*# sourceMappingURL=homepage.css.map */
